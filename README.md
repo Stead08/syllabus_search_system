@@ -37,7 +37,7 @@ This will watch the project directory and restart as necessary.
 - python3 (データ収集)
 - PostgreSQL（データベース）
 - Deno（TS実行環境）
-- Fresh(Denoフレームワーク）
+- Aleph.js(Denoフレームワーク）
 - Type Script (フロントエンド、サーバーサイド)
 - Go? (サーバサイド)=>TSでかける？
 - AWS(サーバ、DB)
