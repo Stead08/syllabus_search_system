@@ -1,12 +1,13 @@
-import {applyUnoCSS} from "aleph/runtime/core/style.ts";
-import {useRef, useState} from "react"
-import {MenuItem, FormControl, Select, InputLabel} from "@mui/material"
+import Unocss from '@unocss/core'
+import React, {useRef, useState} from "react"
+import {MenuItem, FormControl, InputLabel, Button, Input, TextField} from "@mui/material"
 import {SearchDataList, inputSearchData, dayOfWeek, period} from "../definition.ts";
 
 interface ComboBoxItem {
     id: string;
     value: string;
 }
+
 const Data = JSON.stringify(inputSearchData);
 
 export default function SearchInput() {
@@ -57,64 +58,84 @@ export default function SearchInput() {
     }
 
     return (
-        <div className="m-25">
-            <h2 className="font-semibold text-2xl">検索条件</h2>
-            <div className="m-t-15"></div>
-            <FormControl className="f-w-200">
-                <InputLabel>大分類</InputLabel>
-                <Select
+        <div className="m-10">
+            <h2>検索条件</h2>
+            <FormControl className='m-t-10'>
+                <TextField
+                    id="Category"
+                    select
+                    label="大分類"
                     defaultValue={CategoryOptions[0].id}
+                    helperText="大分類を選択してください"
                     value={selectedCategoryId}
-                    onChange={(e:any) => {
+                    onChange={(e: any) => {
                         if (e.target.value !== undefined) {
                             onCategoryChangeHandler(e.target.value as string)
                         }
-                    }
-                    }>
+                    }}
+                >
                     {CategoryOptions.map((item) => (
                         <MenuItem value={item.id} key={item.id}>
                             {item.value}
                         </MenuItem>
                     ))}
-                </Select>
+                </TextField>
             </FormControl>
-            <div className="m-t-15"></div>
-            <FormControl className="f-w-200">
-                <InputLabel>小分類</InputLabel>
-                <Select
-                    defaultValue={"1"}
+            <div></div>
+            <FormControl className="m-t-5">
+                <TextField
+                    id="SubCategory"
+                    select
+                    label="小分類"
+                    helperText="小分類を選択してください"
                     value={selectedSubCategoryId}
-                    onChange={(e:any) => {
-                    if (e.target.value !== undefined) {
-                setSelectedSubCategoryId(e.target.value as string);
-                }
-            }}
-            >
+                    onChange={(e: any) => {
+                        if (e.target.value !== undefined) {
+                            setSelectedSubCategoryId(e.target.value as string)
+                        }
+                    }}
+                >
                     {CategoryOptionsRef.current.map((item) => (
                         <MenuItem value={item.id} key={item.id}>
                             {item.value}
                         </MenuItem>
                     ))}
-                </Select>
+                </TextField>
             </FormControl>
-            <h3>曜日と時間</h3>
-            <select>
+            <div></div>
+            <FormControl className="m-t-5">
+                <TextField
+                    id="dayOfWeek"
+                    select
+                    label="曜日"
+                    helperText="曜日を選択"
+                    >
                 {
                     (dayOfWeek.map((day, index) => (
                         <option value={day.value} key={index}>{day.label}</option>
                     )))
                 }
-            </select>
-            <select>
+                </TextField>
+                <TextField
+                    id="period"
+                    select
+                    label="時限"
+                    helperText="時限を選択"
+                    >
                 {
                     (period.map((period, index) => (
                         <option value={period.value} key={index}>{period.label}</option>
                     )))
                 }
-            </select>
-            <h3>講義名で検索</h3>
-            <input placeholder="講義名"/>
-            <button>検索</button>
+                </TextField>
+            </FormControl>
+            <div></div>
+            <FormControl className="m-t-5">
+            <InputLabel>講義名で検索</InputLabel>
+            <Input placeholder="講義名"/>
+            </FormControl>
+            <div className='m-t-10'></div>
+            <Button size="large">検索</Button>
         </div>
     )
 }

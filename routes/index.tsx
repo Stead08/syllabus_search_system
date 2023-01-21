@@ -1,4 +1,5 @@
 import SearchInput from "../components/SearchInput.tsx";
+import Unocss from "@unocss/core"
 
 
 export default function Home()  {
