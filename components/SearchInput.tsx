@@ -59,7 +59,7 @@ export default function SearchInput() {
 
     return (
         <div className="m-10">
-            <h2>検索条件</h2>
+            <h2 className="font-semibold text-xl">検索条件</h2>
             <FormControl className='m-t-10'>
                 <TextField
                     id="Category"
@@ -87,6 +87,7 @@ export default function SearchInput() {
                     id="SubCategory"
                     select
                     label="小分類"
+                    defaultValue ="1"
                     helperText="小分類を選択してください"
                     value={selectedSubCategoryId}
                     onChange={(e: any) => {
