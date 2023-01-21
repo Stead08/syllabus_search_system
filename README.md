@@ -19,7 +19,7 @@ This will watch the project directory and restart as necessary.
 
 （時間割も簡単に作れる）. 
 
-## やらなくていいこと
+## まだやらなくていいこと
 シラバスの登録機能. 
 
 ユーザ認証. 
