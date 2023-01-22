@@ -40,9 +40,11 @@ This will watch the project directory and restart as necessary.
 - Aleph.js(Denoフレームワーク）
 - Type Script (フロントエンド、サーバーサイド)
 - Go? (サーバサイド)=>TSでかける？
-- AWS(サーバ、DB)
+- - (AWS LambdaはGoで書いた方がメンテしやすそう)
+- AWS(S3, Route53, RDS, Lambda, API Gateway)
+- Docker（AWS Lambdaをコンテナイメージから作成する場合）
 
-## はじめに作る機能
+## はじめに実装したい機能
 
 カテゴリから検索（学類→大分類→小分類）
 
@@ -50,13 +52,3 @@ This will watch the project directory and restart as necessary.
 
 講義名検索
 
-## わからんこと
-クライアント、サーバとデータベースの繋がり
-- クライアントがトップページにアクセス、表示
-- 検索条件を選択し、検索ボタンを押す
-- ーーーここからわからんーーー
-- JsonでAPIを叩く？
-- APIサーバがDBサーバを操作して検索し検索結果をAPIサーバがGETする
-- ここからwebサーバに結果を飛ばしてWebサーバがページを生成？
-- それともクライアントがJSONを元にページを端末で生成して表示？
-- 
