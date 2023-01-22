@@ -10,7 +10,8 @@ interface ComboBoxItem {
 
 const Data = JSON.stringify(inputSearchData);
 
-export default function SearchInput() {
+export default function SearchInput(props:any) {
+    const {SearchText} = props;
     const data = JSON.parse(Data);
     const inputData: SearchDataList[] = Object.keys(data).map((key) => {
         return data[key]
@@ -56,6 +57,19 @@ export default function SearchInput() {
             }
         })
     }
+    const [searchValue, setSearchValue] = useState("")
+    const handleSearchInputChanges = (e:any) => {
+        setSearchValue(e.target.value)
+    }
+    const resetInputField = () => {
+        setSearchValue("")
+    }
+
+    const callSearchFunction = (e:any) => {
+        e.preventDefault();
+        props.searchText(searchValue);
+        resetInputField();
+    }
 
     return (
         <div className="m-10">
@@ -87,7 +101,7 @@ export default function SearchInput() {
                     id="SubCategory"
                     select
                     label="小分類"
-                    defaultValue ="1"
+                    defaultValue="1"
                     helperText="小分類を選択してください"
                     value={selectedSubCategoryId}
                     onChange={(e: any) => {
@@ -110,33 +124,37 @@ export default function SearchInput() {
                     select
                     label="曜日"
                     helperText="曜日を選択"
-                    >
-                {
-                    (dayOfWeek.map((day, index) => (
-                        <option value={day.value} key={index}>{day.label}</option>
-                    )))
-                }
+                >
+                    {
+                        (dayOfWeek.map((day, index) => (
+                            <option value={day.value} key={index}>{day.label}</option>
+                        )))
+                    }
                 </TextField>
                 <TextField
                     id="period"
                     select
                     label="時限"
                     helperText="時限を選択"
-                    >
-                {
-                    (period.map((period, index) => (
-                        <option value={period.value} key={index}>{period.label}</option>
-                    )))
-                }
+                >
+                    {
+                        (period.map((period, index) => (
+                            <option value={period.value} key={index}>{period.label}</option>
+                        )))
+                    }
                 </TextField>
             </FormControl>
             <div></div>
             <FormControl className="m-t-5">
-            <InputLabel>講義名で検索</InputLabel>
-            <Input placeholder="講義名"/>
+                <InputLabel>講義名で検索</InputLabel>
+                <Input
+                    value={searchValue}
+                    onChange={handleSearchInputChanges}
+                    type="text"
+                />
             </FormControl>
             <div className='m-t-10'></div>
-            <Button size="large">検索</Button>
+            <Button size="large" onClick={callSearchFunction} type="submit" value="Search">検索</Button>
         </div>
     )
 }

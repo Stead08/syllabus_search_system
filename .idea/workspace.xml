@@ -4,22 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="Initial commit">
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="update &#10;inputForm">
+      <change afterPath="$PROJECT_DIR$/components/fetchSyllabusList.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Syllabus.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="18c70b19-e953-4e0a-a626-0a8c6e80fa62" />
+        <option name="url" value="https://github.com/Stead08/syllabus_search_deno_aleph.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KaTkkBNRcjPYyjAP4w0gyAApng" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,6 +85,7 @@
       <workItem from="1674222353468" duration="611000" />
       <workItem from="1674222987726" duration="1474000" />
       <workItem from="1674256370297" duration="4413000" />
+      <workItem from="1674301403273" duration="10544000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
