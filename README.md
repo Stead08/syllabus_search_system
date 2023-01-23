@@ -30,13 +30,14 @@
 - python3 (データ収集)
 - PostgreSQL（データベース）
 - Deno（TS実行環境）
-- Aleph.js(Denoフレームワーク）
+- Aleph.js(Reactフレームワーク）
+- React (Web アプリフレームワーク）
 - Type Script (フロントエンド、サーバーサイド)
 - Docker(AWS lambdaのため)
 - AWS(RDS, Lambda, S3, API gateway, Route 53)
 
 ## フレームワーク選定の経緯
-始めはPreactを用いるDenoフレームワーク、Freshを用いてフロントエンドの開発に着手した。しかしPreactは初心者の自分には洗練されすぎていて情報も少なく使用するメリットを感じなくなったので、Reactが使用できるAleph.jsに変更した。
+始めはPreactを用いるDenoフレームワーク、Freshを用いてフロントエンドの開発に着手した。しかしPreactは初心者の自分には洗練されすぎていて情報も少なく使用するメリットを感じなくなったので、Deno用Reactフレームワーク、Aleph.jsに変更した。
 
 ## はじめに作る機能
 
