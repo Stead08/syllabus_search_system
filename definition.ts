@@ -9,7 +9,7 @@ export interface SearchDataList {
     }[];
 }
 
-export const inputSearchData = [
+export const inputSearchData: [SearchDataList] = [
     {
         CategoryId: "1",
         CategoryName: "基盤教育",
@@ -23,7 +23,7 @@ export const inputSearchData = [
                 SubCategoryName: "教養領域"
             },
             {
-                SubCategoryId: 3,
+                SubCategoryId: "3",
                 SubCategoryName: "問題探究領域"
             },
         ]

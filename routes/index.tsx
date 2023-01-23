@@ -8,7 +8,7 @@ export default function Home() {
     const [SearchedList, setSearchedList] = useState("");
     const [errorMessage, setErrorMessage] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost:4000/beers/`, {
+        fetch(``, {
             method: "GET"
         })
             .then(response => response.json())
@@ -23,7 +23,7 @@ export default function Home() {
         setLoading(true);
         setErrorMessage(null);
 
-        const json = fetch(`http://localhost:4000/beers/name/${searchText}`, {
+        const json = fetch(`http://localhost:4000/search/lesson/${searchText}`, {
             method: "GET"
         })
 
