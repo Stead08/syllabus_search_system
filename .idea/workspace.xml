@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="update README　(1/22/2023)">
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/23/2023&#10;update top page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/definition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/definition.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
     </list>
@@ -88,7 +89,9 @@
       <workItem from="1674301403273" duration="13523000" />
       <workItem from="1674375335875" duration="74000" />
       <workItem from="1674375462728" duration="599000" />
-      <workItem from="1674479953700" duration="545000" />
+      <workItem from="1674479953700" duration="579000" />
+      <workItem from="1674517163411" duration="198000" />
+      <workItem from="1674518497346" duration="6810000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
@@ -118,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674351821637</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1/23/2023&#10;update top page">
+      <created>1674480528798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674480528798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +150,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="update (1/22/2023)&#10;can show JSON raw data" />
     <MESSAGE value="update README　(1/22/2023)" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README　(1/22/2023)" />
+    <MESSAGE value="1/23/2023&#10;update top page" />
+    <option name="LAST_COMMIT_MESSAGE" value="1/23/2023&#10;update top page" />
   </component>
 </project>

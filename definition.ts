@@ -9,7 +9,7 @@ export interface SearchDataList {
     }[];
 }
 
-export const inputSearchData: [SearchDataList] = [
+export const inputSearchData = [
     {
         CategoryId: "1",
         CategoryName: "基盤教育",

@@ -2,6 +2,7 @@ import Unocss from '@unocss/core'
 import React, {useRef, useState} from "react"
 import {MenuItem, FormControl, InputLabel, Button, Input, TextField} from "@mui/material"
 import {SearchDataList, inputSearchData, dayOfWeek, period} from "../definition.ts";
+import {toInteger} from "https://deno.land/std@0.173.0/node/internal/buffer.mjs";
 
 interface ComboBoxItem {
     id: string;
@@ -10,8 +11,8 @@ interface ComboBoxItem {
 
 const Data = JSON.stringify(inputSearchData);
 
-export default function SearchInput(props:any) {
-    const {SearchText} = props;
+export default function SearchInput(props :any) {
+    const {searchText} = props;
     const data = JSON.parse(Data);
     const inputData: SearchDataList[] = Object.keys(data).map((key) => {
         return data[key]
@@ -67,8 +68,9 @@ export default function SearchInput(props:any) {
 
     const callSearchFunction = (e:any) => {
         e.preventDefault();
-        props.searchText(searchValue);
+        props.searchText([searchValue, ""]);
         resetInputField();
+
     }
 
     return (
@@ -101,7 +103,7 @@ export default function SearchInput(props:any) {
                     id="SubCategory"
                     select
                     label="小分類"
-                    defaultValue="1"
+                    //defaultValue="1"
                     helperText="小分類を選択してください"
                     value={selectedSubCategoryId}
                     onChange={(e: any) => {
