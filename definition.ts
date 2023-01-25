@@ -11,6 +11,16 @@ export interface SearchDataList {
 
 export const inputSearchData = [
     {
+        CategoryId: "0",
+        CategoryName: "",
+        SubCategory: [
+            {
+                subCategoryId: "1",
+                subCategoryName: ""
+            }
+        ]
+    },
+    {
         CategoryId: "1",
         CategoryName: "基盤教育",
         SubCategory: [

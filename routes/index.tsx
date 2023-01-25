@@ -1,11 +1,8 @@
 import SearchInput from "../components/SearchInput.tsx";
+import { ShowSyllabusList } from "../components/ShowSyllabusList.tsx"
 import {useState, useEffect} from "react";
 import Unocss from "@unocss/core"
 
-type searchText = {
-    searchText: string;
-    category: string;
-}
 export default function Home() {
     const [loading, setLoading] = useState(true);
     const [SearchedList, setSearchedList] = useState("");
@@ -19,26 +16,29 @@ export default function Home() {
                 setSearchedList(jsonResponse.Search);
                 setLoading(false);
             });
-        console.log(SearchedList)
     }, []);
+
     //検索ボタンが押された時の処理
-    const search = (searchText:searchText) => {
+    const search = (searchText: any) => {
         setLoading(true);
         setErrorMessage(null);
+        const lesson = searchText[0];
+        const category = "lesson" && searchText[1];
 
-        const json = fetch(`http://localhost:4000/search/${searchText.category}/${searchText.searchText}`, {
+
+        const json = fetch(`http://localhost:4000/search/${category}/${lesson}`, {
             method: "GET"
         });
         json.then((response: Response) => {
             return response.json();
         }).then((jsonData) => {
-            console.log(JSON.stringify(jsonData))
-            setSearchedList(JSON.stringify(jsonData))
+            console.log(jsonData)
+            setSearchedList(jsonData)
         })
 
 
     };
-
+    //const SyllabusList = ShowSyllabusList(SearchedList)
 
     return (
         <>
@@ -51,10 +51,30 @@ export default function Home() {
             <SearchInput
                 searchText={search}
             />
-            <div className="syllabusList">
-
-                <p>{SearchedList}</p>
+            <div　className="px-8 py-4">
+                <h1>検索結果</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>no</th>
+                        <th>講義名</th>
+                        <th>担当教員</th>
+                        <th>単位区分</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {Object.keys(SearchedList).map((key, ii) => (
+                        <tr key={ii}>
+                            <td>{ii}</td>
+                            <td>{SearchedList[key].講義名}</td>
+                            <td>{SearchedList[key].担当教員}</td>
+                            <td>{SearchedList[key].単位区分}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
             </div>
+
 
         </>
     );
