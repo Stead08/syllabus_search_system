@@ -1,6 +1,8 @@
 import SearchInput from "../components/SearchInput.tsx";
 import {DataGrid, GridColDef} from "@mui/x-data-grid"
+import SyllabusDetailModal from "../components/SyllabusDetailModal.tsx";
 import {useState, useEffect} from "react";
+import {syllabusDetail} from "../definition.ts";
 
 const columns: GridColDef[] = [
     {field: 'syllabus_list_id', headerName: 'ID', width: 70},
@@ -48,12 +50,35 @@ const columns: GridColDef[] = [
         width: 70,
     }
 ]
+
+const defaultSyllabusDetail: syllabusDetail = {
+    "syllabus_detail_id": 9999,
+    "講義名": "",
+    "クラス": "",
+    "担当教員": "",
+    "学年": "",
+    "開講学期": "",
+    "開講時期": "",
+    "曜日_時限": "",
+    "科目種別": "",
+    "科目区分": "",
+    "単位区分": "",
+    "単位数": 0,
+    "準備事項": "",
+    "備考": "",
+    "特殊プログラム": "",
+    "授業方法": "",
+    "講義情報": "",
+    "registration_date": Date(628021800000)
+}
 export default function Home() {
     const [SearchedList, setSearchedList] = useState("");
-    const [Syllabus, setSyllabus] = useState("");
+    const [Syllabus, setSyllabus] = useState([defaultSyllabusDetail]);
+    const [open, setOpen] = useState(false);
+
 
     //検索ボタンが押された時の処理
-    const search = (searchText: any) => {
+    const search = (searchText: [string, string]) => {
         const lesson = searchText[0];
         const category = "lesson" && searchText[1];
 
@@ -70,19 +95,17 @@ export default function Home() {
 
     };
 
-
-
-
     const cellClickHandler = (event: any) => {
         const json = fetch(`http://localhost:4000/syllabus/${event.row.syllabus_detail_id}`, {
             method: "GET"
         });
         json.then((response: Response) => {
             return response.json();
-        }).then((jsonData) => {
-            console.log(jsonData)
+        }).then((jsonData: syllabusDetail) => {
             setSyllabus(jsonData)
         })
+        setOpen(true)
+
     }
 
     return (
@@ -108,8 +131,10 @@ export default function Home() {
                     }}
                 />
             </div>
-
-
+            <SyllabusDetailModal
+                isOpen={open}
+                syllabus={Syllabus}
+            />
         </>
     );
 }

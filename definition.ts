@@ -8,6 +8,27 @@ export interface SearchDataList {
         SubCategoryName: string;
     }[];
 }
+export type syllabusDetail = {
+    syllabus_detail_id: number;
+    科目名: string;
+    講義名: string;
+    クラス: string;
+    担当教員: string;
+    学年: string;
+    開講学期: string;
+    開講時期: string;
+    曜日_時限: string;
+    科目種別: string;
+    科目区分: string;
+    単位区分: string;
+    単位数: number;
+    準備事項: string;
+    備考: string;
+    特殊プログラム: string;
+    授業方法: string;
+    講義情報: string;
+    registration_date: Date;
+};
 
 export const inputSearchData = [
     {

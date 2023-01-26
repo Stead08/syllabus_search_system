@@ -17,7 +17,10 @@
     "@mui/material": "https://esm.sh/@mui/material",
     "@mui/@emotion/react": "https://esm.sh/@mui/@emotion/react",
     "@emotion/styled": "https://esm.sh/@emotion/styled",
-    "@mui/types": "https://esm.sh/@mui.types"
+    "@mui/types": "https://esm.sh/@mui.types",
+    "@mui/icons-material/Close": "https://esm.sh/@mui/icons-material/Close",
+    "@mui/material/Modal": "https://esm.sh/@mui/material/Model",
+    "html-react-parser": "https://esm.sh/html-react-parser@3.0.8"
   },
   "scopes": {}
 }
