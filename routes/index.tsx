@@ -119,7 +119,7 @@ export default function Home() {
             <SearchInput
                 searchText={search}
             />
-            <div style={{height: 800, width: '100%'}}>
+            <div style={{height: 800, width: '80%', margin: 10}}>
                 <DataGrid
                     getRowId={(row) => row.syllabus_detail_id}
                     rows={SearchedList}

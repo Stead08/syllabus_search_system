@@ -129,33 +129,6 @@ export default function SearchInput(props :[string, string]) {
             </FormControl>
             <div></div>
             <FormControl className="m-t-5">
-                <TextField
-                    id="dayOfWeek"
-                    select
-                    label="曜日"
-                    helperText="曜日を選択"
-                >
-                    {
-                        (dayOfWeek.map((day, index) => (
-                            <option value={day.value} key={index}>{day.label}</option>
-                        )))
-                    }
-                </TextField>
-                <TextField
-                    id="period"
-                    select
-                    label="時限"
-                    helperText="時限を選択"
-                >
-                    {
-                        (period.map((period, index) => (
-                            <option value={period.value} key={index}>{period.label}</option>
-                        )))
-                    }
-                </TextField>
-            </FormControl>
-            <div></div>
-            <FormControl className="m-t-5">
                 <InputLabel>講義名で検索</InputLabel>
                 <Input
                     value={searchValue}

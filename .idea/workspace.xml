@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/26/2023&#10;update top page&#10;can get syllabus detail JSON when selected on list">
-      <change afterPath="$PROJECT_DIR$/components/SyllabusDetailModal.tsx" afterDir="false" />
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/26/2023&#10;update top page&#10;can search by category, lecture&#10;cannot search by day of week and period">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/definition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/definition.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/import_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/import_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SyllabusDetailModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SyllabusDetailModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +96,7 @@
       <workItem from="1674574225012" duration="286000" />
       <workItem from="1674574540945" duration="665000" />
       <workItem from="1674605253796" duration="1139000" />
+      <workItem from="1674745731730" duration="2640000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674694167655</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1/26/2023&#10;update top page&#10;can search by category, lecture&#10;cannot search by day of week and period">
+      <created>1674727261329</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674727261329</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +179,7 @@
     <MESSAGE value="1/23/2023&#10;update top page" />
     <MESSAGE value="1/23/2023&#10;update top page&#10;修正中につき何も動かん" />
     <MESSAGE value="1/26/2023&#10;update top page&#10;can get syllabus detail JSON when selected on list" />
-    <option name="LAST_COMMIT_MESSAGE" value="1/26/2023&#10;update top page&#10;can get syllabus detail JSON when selected on list" />
+    <MESSAGE value="1/26/2023&#10;update top page&#10;can search by category, lecture&#10;cannot search by day of week and period" />
+    <option name="LAST_COMMIT_MESSAGE" value="1/26/2023&#10;update top page&#10;can search by category, lecture&#10;cannot search by day of week and period" />
   </component>
 </project>

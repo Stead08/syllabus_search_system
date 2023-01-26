@@ -21,9 +21,8 @@ const modalContentStyle ={
     position:"relative",
     background:"#fff",
     boxShadow:24,
-    mt:3,
     width:"50rem",
-    mb:3,
+    margin: 10,
     borderRadius:"10px",
 };
 
@@ -43,7 +42,7 @@ export default function BasicModal(props) {
             handleOpen();
             console.log(parse(syllabus[0].講義情報))
         }
-    }, [props])
+    }, [isOpen])
 
     return (
         <>
@@ -65,7 +64,7 @@ export default function BasicModal(props) {
                         <Typography id="modal-modal-title" variant="h6" component="h2">
                             シラバス詳細
                         </Typography>
-                        <table>
+                        <table className="m-10">
                             <tr>
                                 <th>講義名</th>
                                 <td>{syllabus[0].講義名}</td>
@@ -138,9 +137,10 @@ export default function BasicModal(props) {
                                 <th>授業方法</th>
                                 <td>{syllabus[0].授業方法}</td>
                             </tr>
-                            <>
-                                {parse(syllabus[0].講義情報)}
-                            </>
+                            <tr>
+                                <th>授業情報</th>
+                                <td>{parse(syllabus[0].講義情報)}</td>
+                            </tr>
 
 
                         </table>
