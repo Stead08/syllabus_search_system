@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/23/2023&#10;update top page&#10;修正中につき何も動かん">
-      <change afterPath="$PROJECT_DIR$/components/ShowSyllabusList.tsx" afterDir="false" />
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/23/2023&#10;update top page&#10;can search by category and word (test)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/fetchSyllabusList.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/definition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/definition.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ShowSyllabusList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ShowSyllabusList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/import_map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

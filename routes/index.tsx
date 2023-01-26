@@ -1,27 +1,59 @@
 import SearchInput from "../components/SearchInput.tsx";
-import { ShowSyllabusList } from "../components/ShowSyllabusList.tsx"
+import {DataGrid, GridColDef} from "@mui/x-data-grid"
 import {useState, useEffect} from "react";
-import Unocss from "@unocss/core"
 
+const columns: GridColDef[] = [
+    {field: 'syllabus_list_id', headerName: 'ID', width: 70},
+    {field: '科目区分', headerName: '科目区分', width: 130},
+    {field: '単位区分', headerName: '単位区分', width: 70},
+    {
+        field: '講義名',
+        headerName: '講義名',
+        type: 'string',
+        width: 160,
+    },
+    {
+        field: '担当教員',
+        headerName: '担当教員',
+        width: 160,
+    },
+    {
+        field: '単位区分',
+        headerName: '単位区分',
+        width: 70,
+    },
+    {
+        field: '学年',
+        headerName: '学年',
+        width: 70,
+    },
+    {
+        field: '開講時期',
+        headerName: '開講時期',
+        width: 70,
+    },
+    {
+        field: '曜日1',
+        headerName: '曜日',
+        width: 70,
+    },
+    {
+        field: '時限1',
+        headerName: '時限',
+        width: 70,
+    },
+    {
+        field: 'syllabus_detail_id',
+        headerName: '詳細ID',
+        width: 70,
+    }
+]
 export default function Home() {
-    const [loading, setLoading] = useState(true);
     const [SearchedList, setSearchedList] = useState("");
-    const [errorMessage, setErrorMessage] = useState(null);
-    useEffect(() => {
-        fetch(``, {
-            method: "GET"
-        })
-            .then(response => response.json())
-            .then(jsonResponse => {
-                setSearchedList(jsonResponse.Search);
-                setLoading(false);
-            });
-    }, []);
+    const [Syllabus, setSyllabus] = useState("");
 
     //検索ボタンが押された時の処理
     const search = (searchText: any) => {
-        setLoading(true);
-        setErrorMessage(null);
         const lesson = searchText[0];
         const category = "lesson" && searchText[1];
 
@@ -32,13 +64,26 @@ export default function Home() {
         json.then((response: Response) => {
             return response.json();
         }).then((jsonData) => {
-            console.log(jsonData)
             setSearchedList(jsonData)
         })
 
 
     };
-    //const SyllabusList = ShowSyllabusList(SearchedList)
+
+
+
+
+    const cellClickHandler = (event: any) => {
+        const json = fetch(`http://localhost:4000/syllabus/${event.row.syllabus_detail_id}`, {
+            method: "GET"
+        });
+        json.then((response: Response) => {
+            return response.json();
+        }).then((jsonData) => {
+            console.log(jsonData)
+            setSyllabus(jsonData)
+        })
+    }
 
     return (
         <>
@@ -51,28 +96,17 @@ export default function Home() {
             <SearchInput
                 searchText={search}
             />
-            <div　className="px-8 py-4">
-                <h1>検索結果</h1>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>no</th>
-                        <th>講義名</th>
-                        <th>担当教員</th>
-                        <th>単位区分</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {Object.keys(SearchedList).map((key, ii) => (
-                        <tr key={ii}>
-                            <td>{ii}</td>
-                            <td>{SearchedList[key].講義名}</td>
-                            <td>{SearchedList[key].担当教員}</td>
-                            <td>{SearchedList[key].単位区分}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+            <div style={{height: 800, width: '100%'}}>
+                <DataGrid
+                    getRowId={(row) => row.syllabus_detail_id}
+                    rows={SearchedList}
+                    columns={columns}
+                    pageSize={30}
+                    rowsPerPageOptions={[15]}
+                    onCellClick={(event: any) => {
+                        cellClickHandler(event);
+                    }}
+                />
             </div>
 
 

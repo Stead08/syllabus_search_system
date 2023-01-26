@@ -13,6 +13,7 @@
     "react-dom": "https://esm.sh/react-dom@18.2.0",
     "react-dom/": "https://esm.sh/react-dom@18.2.0/",
     "react": "https://esm.sh/react@18.2.0",
+    "@mui/x-data-grid": "https://esm.sh/@mui/x-data-grid",
     "@mui/material": "https://esm.sh/@mui/material",
     "@mui/@emotion/react": "https://esm.sh/@mui/@emotion/react",
     "@emotion/styled": "https://esm.sh/@emotion/styled",
