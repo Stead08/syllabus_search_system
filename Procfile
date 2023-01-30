@@ -1,1 +1,0 @@
-web: deno run --allow-net=deno.land,esm.sh,:$PORT --allow-read --allow-write=. --allow-env --allow-run server.ts start --port=$PORT
