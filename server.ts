@@ -1,9 +1,9 @@
 import { serve } from "aleph/react-server";
-import * as flags from "https://deno.land/std@v0.27.0/flags/mod.ts";
-import {presetUno} from "@unocss/preset-uno";
+import { parse } from "std/flags/mod.ts";
+import { presetUno } from "@unocss/preset-uno";
 
 const DEFAULT_PORT = 8080;
-const argPort = flags.parse(Deno.args).port;
+const argPort = parse(Deno.args).port;
 const port = argPort ? Number(argPort) : DEFAULT_PORT;
 if (isNaN(port)) {
   console.error('Port is not a number.');
