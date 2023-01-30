@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SyllabusDetailModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SyllabusDetailModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/import_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/import_map.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -97,7 +100,7 @@
       <workItem from="1674834696789" duration="3120000" />
       <workItem from="1674886377924" duration="1000" />
       <workItem from="1674888652003" duration="6450000" />
-      <workItem from="1675065260278" duration="2129000" />
+      <workItem from="1675065260278" duration="6200000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
@@ -169,7 +172,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675067124900</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675067780798</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675067780798</updated>
+    </task>
+    <task id="LOCAL-00012" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675067929841</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675067929841</updated>
+    </task>
+    <task id="LOCAL-00013" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675068062647</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675068062647</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

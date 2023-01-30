@@ -1,5 +1,8 @@
 import {useState, useEffect} from "react"
-import {Box, IconButton, Typography, Modal} from "@mui/material";
+import Box from "@mui/material/Box";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 import parse from "html-react-parser"
 

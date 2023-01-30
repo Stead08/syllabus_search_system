@@ -1,6 +1,11 @@
 import Unocss from '@unocss/core'
 import React, {useRef, useState} from "react"
-import {MenuItem, FormControl, InputLabel, Button, Input, TextField} from "@mui/material"
+import MenuItem from "@mui/material/MenuItem"
+import FormControl from "@mui/material/FormControl"
+import InputLabel from "@mui/material/InputLabel"
+import Button from "@mui/material/Button"
+import Input from "@mui/material/Input"
+import TextField from "@mui/material/TextField"
 import {SearchDataList, inputSearchData, dayOfWeek, period} from "../definition.ts";
 import {toInteger} from "https://deno.land/std@0.173.0/node/internal/buffer.mjs";
 
