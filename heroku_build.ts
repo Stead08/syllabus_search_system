@@ -20,21 +20,21 @@ const buildStatus = await Deno.run({
 
 console.log(`Build Exit Code: ${buildStatus.code}`);
 
-const startStatus = await Deno.run({
-    cmd: [
-        Deno.execPath(),
-        "run",
-        "--allow-net",
-        "--allow-read",
-        "--allow-write",
-        "server.ts",
-        "--allow-env",
-        "--allow-run",
-        "start",
-        "--help",
-    ],
-    stdout: "null",
-    stderr: "inherit",
-}).status();
-
-console.log(`Help Exit Code: ${startStatus.code}`);
+// const startStatus = await Deno.run({
+//     cmd: [
+//         Deno.execPath(),
+//         "run",
+//         "--allow-net",
+//         "--allow-read",
+//         "--allow-write",
+//         "server.ts",
+//         "--allow-env",
+//         "--allow-run",
+//         "start",
+//         "--help",
+//     ],
+//     stdout: "null",
+//     stderr: "inherit",
+// }).status();
+//
+// console.log(`Help Exit Code: ${startStatus.code}`);

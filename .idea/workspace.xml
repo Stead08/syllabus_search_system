@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
-      <change beforePath="$PROJECT_DIR$/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.ts" afterDir="false" />
-    </list>
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/30/2023&#10;updated for heroku deploying&#10;still not good layout" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +95,7 @@
       <workItem from="1674834696789" duration="3120000" />
       <workItem from="1674886377924" duration="1000" />
       <workItem from="1674888652003" duration="6450000" />
-      <workItem from="1675065260278" duration="8881000" />
+      <workItem from="1675065260278" duration="9231000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
@@ -253,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675074267907</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675074506039</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675074506039</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675074677346</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675074677346</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
