@@ -6,7 +6,7 @@ const buildStatus = await Deno.run({
     cmd: [
         Deno.execPath(),
         "run",
-        "--allow-net=deno.land,esm.sh,cdn.esm.sh",
+        "--allow-net",
         "--allow-read",
         "--allow-write",
         "--allow-env",
@@ -24,7 +24,7 @@ const startStatus = await Deno.run({
     cmd: [
         Deno.execPath(),
         "run",
-        "--allow-net=deno.land,esm.sh,cdn.esm.sh",
+        "--allow-net",
         "--allow-read",
         "--allow-write",
         "server.ts",
