@@ -12,7 +12,7 @@ if (isNaN(port)) {
 
 serve({
   ssr: true,
-  port: 8000,
+  port: port,
   unocss: {
     presets: [presetUno()],
   },
