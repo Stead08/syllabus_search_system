@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/30/2023&#10;updated for heroku deploying&#10;still not good layout" />
+    <list default="true" id="bc64ab2b-55df-4b7d-9e0c-710ef5cd8490" name="変更" comment="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <change beforePath="$PROJECT_DIR$/heroku_build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/heroku_build.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +72,16 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Deno: heroku_build.ts" type="DenoConfigurationType" temporary="true" nameIsGenerated="true" inputPath="$PROJECT_DIR$/heroku_build.ts" programParameters="run" workingDirectory="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Deno.Deno: heroku_build.ts" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">
@@ -95,7 +107,7 @@
       <workItem from="1674834696789" duration="3120000" />
       <workItem from="1674886377924" duration="1000" />
       <workItem from="1674888652003" duration="6450000" />
-      <workItem from="1675065260278" duration="9231000" />
+      <workItem from="1675065260278" duration="9566000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1674224131829</created>
@@ -265,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675074677346</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="1/30/2023&#10;updated for heroku deploying&#10;still not good layout">
+      <created>1675074911554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675074911554</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
