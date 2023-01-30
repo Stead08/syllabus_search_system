@@ -2,6 +2,7 @@ import Unocss from '@unocss/core'
 import React, {useRef, useState} from "react"
 import {MenuItem, FormControl, InputLabel, Button, Input, TextField} from "@mui/material"
 import {SearchDataList, inputSearchData, dayOfWeek, period} from "../definition.ts";
+import {toInteger} from "https://deno.land/std@0.173.0/node/internal/buffer.mjs";
 
 interface ComboBoxItem {
     id: string;
@@ -10,8 +11,8 @@ interface ComboBoxItem {
 
 const Data = JSON.stringify(inputSearchData);
 
-export default function SearchInput(props :[string, string]) {
-    const {searchText} = props;
+export default function SearchInput(props: [string, string]) {
+
     const data = JSON.parse(Data);
     const inputData: SearchDataList[] = Object.keys(data).map((key) => {
         return data[key]
@@ -24,7 +25,7 @@ export default function SearchInput(props :[string, string]) {
             }
         })
     );
-    //Categoryリストで選択中の都道府県ID State管理
+    //Categoryリストで選択中のID State管理
     const [selectedCategoryId, setSelectedCategoryId] = useState<string>(inputData[0].CategoryId);
     //Category（選択中）Ref管理
     const CategoryOptionsRef = useRef(
@@ -56,27 +57,26 @@ export default function SearchInput(props :[string, string]) {
             }
         })
     }
-    const [searchValue, setSearchValue]: [string, string] = useState("")
-    const handleSearchInputChanges = (e:any) => {
+    const [searchValue, setSearchValue] = useState("")
+    const handleSearchInputChanges = (e: any) => {
         setSearchValue(e.target.value)
     }
     const resetInputField = () => {
         setSearchValue("")
     }
     const getCategoryValue = () => {
-        return inputSearchData.filter(
-            (d) => d.CategoryId == selectedCategoryId
-        )[0].SubCategory.filter((d) => d.SubCategoryId)[0].SubCategoryName
+        try {
+            return inputSearchData.filter(
+                (d) => d.CategoryId == selectedCategoryId
+            )[0].SubCategory.filter((d) => d.SubCategoryId == selectedSubCategoryId)[0].SubCategoryName
+        } catch {
+            return "lesson"
+        }
     }
     const callSearchFunction = (e:any) => {
         e.preventDefault();
-        let categoryValue:string = "lesson";
-        try{
-            categoryValue = getCategoryValue()
-        }catch {
-            categoryValue = "lesson"
-        }
-        props.searchText([searchValue, categoryValue]);
+        console.log(getCategoryValue())
+        props.setSearchText([searchValue, getCategoryValue()]);
         resetInputField();
 
     }

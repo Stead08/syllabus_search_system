@@ -1,8 +1,9 @@
 import SearchInput from "../components/SearchInput.tsx";
 import {DataGrid, GridColDef} from "@mui/x-data-grid"
 import SyllabusDetailModal from "../components/SyllabusDetailModal.tsx";
-import {useState, useEffect} from "react";
-import {syllabusDetail} from "../definition.ts";
+import {useState} from "react";
+import {syllabusList, syllabusDetail} from "../definition.ts";
+
 
 const columns: GridColDef[] = [
     {field: 'syllabus_list_id', headerName: 'ID', width: 70},
@@ -50,7 +51,7 @@ const columns: GridColDef[] = [
         width: 70,
     }
 ]
-
+//シラバス詳細の初期値を設定
 const defaultSyllabusDetail: syllabusDetail = {
     "syllabus_detail_id": 9999,
     "講義名": "",
@@ -69,7 +70,7 @@ const defaultSyllabusDetail: syllabusDetail = {
     "特殊プログラム": "",
     "授業方法": "",
     "講義情報": "",
-    "registration_date": Date(628021800000)
+    "registration_date": new Date(2020, 1, 3, 4, 5, 6)
 }
 export default function Home() {
     const [SearchedList, setSearchedList] = useState("");
@@ -83,7 +84,7 @@ export default function Home() {
         const category = "lesson" && searchText[1];
 
 
-        const json = fetch(`http://localhost:4000/search/${category}/${lesson}`, {
+        const json = fetch(`http://13.230.251.209:8080/search/${category}/${lesson}`, {
             method: "GET"
         });
         json.then((response: Response) => {
@@ -96,12 +97,12 @@ export default function Home() {
     };
 
     const cellClickHandler = (event: any) => {
-        const json = fetch(`http://localhost:4000/syllabus/${event.row.syllabus_detail_id}`, {
+        const json = fetch(`http://13.230.251.209:8080/syllabus/${event.row.syllabus_detail_id}`, {
             method: "GET"
         });
         json.then((response: Response) => {
             return response.json();
-        }).then((jsonData: syllabusDetail) => {
+        }).then((jsonData) => {
             setSyllabus(jsonData)
         })
         setOpen(true)
@@ -117,7 +118,7 @@ export default function Home() {
                 </div>
             </div>
             <SearchInput
-                searchText={search}
+                setSearchText = {search}
             />
             <div style={{height: 800, width: '80%', margin: 10}}>
                 <DataGrid

@@ -42,7 +42,7 @@ export default function BasicModal(props) {
             handleOpen();
             console.log(parse(syllabus[0].講義情報))
         }
-    }, [isOpen])
+    }, [syllabus])
 
     return (
         <>
