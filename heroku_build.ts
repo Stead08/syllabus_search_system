@@ -1,7 +1,6 @@
 import { moveSync } from "std/fs/mod.ts";
 
 const text = await Deno.readTextFile("import_map.json");
-const alephPath = JSON.parse(text).imports["aleph/"];
 
 const buildStatus = await Deno.run({
     cmd: [
@@ -12,7 +11,7 @@ const buildStatus = await Deno.run({
         "--allow-write",
         "--allow-env",
         "--allow-run",
-        `${alephPath}cli.ts`,
+        "server.ts",
         "build",
     ],
     stdout: "inherit",
@@ -26,7 +25,7 @@ const startStatus = await Deno.run({
         Deno.execPath(),
         "run",
         "--allow-net=deno.land,esm.sh,cdn.esm.sh",
-        `${alephPath}cli.ts`,
+        "server.ts",
         "start",
         "--help",
     ],
