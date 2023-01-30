@@ -25,6 +25,7 @@ const startStatus = await Deno.run({
         Deno.execPath(),
         "run",
         "--allow-net=deno.land,esm.sh,cdn.esm.sh",
+        "--allow-read",
         "server.ts",
         "start",
         "--help",
